@@ -17,7 +17,6 @@
 
 html {
   line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -197,38 +196,6 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -520,7 +487,7 @@ html {
   flex-wrap: wrap;
   position: relative;
   background-color: #fdfdfdcf;
-  z-index: 1;
+  z-index: 11;
 }
 
 @media (max-width: 950px) {
@@ -562,14 +529,77 @@ DESKTOP NAV */
 .active {
   color: tomato;
 }
-.cargo1 {
-  margin: -90px 0;
+
+.linearBgr {
+  background-color: rgba(3, 3, 3, 0.15);
 }
 
-img {
-  max-width: 100%;
+.cargo11 {
+  margin: -110px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .fa-search {
   padding: 27px;
+}
+
+/* main content CSS Grid */
+.mycontainer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto;
+  grid-gap: 5px;
+  grid-template-areas:
+    "textBlock1 textBlock1"
+    "blockSection1 blockSection1"
+    "blockSection2 blockSection2"
+    "blockSection3 blockSection3"
+    "section5 section6"
+    "aside1 aside1 "
+    "ad1 ad2"
+    "ad3 ad4"
+    "section7 aside2"
+    "footer footer ";
+}
+
+@media (min-width: 450px) {
+  .mycontainer {
+    margin-top: -500px;
+    /* margin: 20px 10%; */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows: repeat(8, 1fr); */
+    /* grid-auto-rows: 120px;*/
+    /* grid-gap: 10px; */
+    grid-template-areas:
+      ". . textBlock1 textBlock1 textBlock1 textBlock1 . . . . . . "
+      " . . blockSection1 blockSection1 blockSection1 blockSection2 blockSection2 . blockSection3 blockSection3 . .";
+  }
+}
+
+.imgBlock13 {
+  height: 240px;
+}
+
+.textBlock {
+  grid-area: textBlock1;
+  margin: -180px 0 250px 0;
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+  background: rgba(195, 124, 124, 0.281);
+}
+
+.blockSection1 {
+  grid-area: blockSection1;
+}
+
+.blockSection2 {
+  grid-area: blockSection2;
+}
+
+.blockSection3 {
+  grid-area: blockSection3;
 }
