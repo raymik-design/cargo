@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <title>Freight Company - Git Project</title>
+  </head>
+  <body>
+    <div class="topheader">
+      <header>
+        <img
+          src="img/logo.png"
+          alt="logo"
+          class="imglogo"
+          title="It's looks like restaurant LOGO"
+        />
+      </header>
+      <!-- Mobile nav Menu -->
+      <nav class="mobNav">
+        <div id="menuToggle">
+          <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+          <input type="checkbox" />
+
+          <!--
+      Some spans to act as a hamburger.
+      
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+
+          <!-- <span class="menuBottom">Menu</span> -->
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+          <ul id="menu">
+            <a href="#"><li>HOME</li></a>
+            <a href="#"><li>ABOUT</li></a>
+            <a href="#"><li>INFO</li></a>
+            <a href="#"><li>SERVICES</li></a>
+            <a href="#" target="_blank"><li>CONTACT</li></a>
+            <a><i class="fa fa-search" aria-hidden="true"></i></a>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Desktop nav Menu  menudesk-->
+      <nav class="menuDesk">
+        <a class="aaa active" href="#">HOME</a>
+        <a class="aaa" href="#">ABOUT</a>
+        <a class="aaa" href="#">INFO</a>
+        <a class="aaa" href="#">SERVICES</a>
+        <a class="aaa" href="#">CONTACT</a>
+        <a><i class="fa fa-search" aria-hidden="true"></i></a>
+      </nav>
+    </div>
+    <div class="mycontainer">
+      <main>
+        <!-- Large main Slider after nav bar -->
+        <div class="slider">
+          <img src="img/cargo1.jpg" class="cargo1" alt="cargo1" />
+        </div>
+        <!-- Large main Slider after nav bar END -->
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>
