@@ -186,7 +186,8 @@ html {
 }
 
 /* 
-DESKTOP NAV */
+DESKTOP 
+Navigation menu */
 .menuDesk {
   display: flex;
   line-height: 2vw;
@@ -208,7 +209,7 @@ DESKTOP NAV */
   color: tomato;
 }
 
-/* Header image */
+/* Main Header image */
 .cargo11 {
   width: 100%;
 }
@@ -272,6 +273,8 @@ DESKTOP NAV */
 .imgBlock1-3:hover {
   transform: scale(1.3);
 }
+
+/* text block at header image left */
 .textBlock {
   grid-area: textBlock;
 }
