@@ -8,9 +8,10 @@ body {
   margin: 0;
   padding: 0;
   /* make it look decent enough  */
-  background: #232323;
+  /* background: #232323; */
   color: #cdcdcd;
   font-family: 'Avenir Next', 'Avenir', sans-serif;
+  width: 100%;
 }
 
 a {
@@ -175,7 +176,7 @@ html {
 }
 
 .imglogo {
-  padding: 20px;
+  padding: 5px;
 }
 
 @media (min-width: 950px) {
@@ -207,13 +208,15 @@ DESKTOP NAV */
   color: tomato;
 }
 
-.linearBgr {
-  background-color: rgba(3, 3, 3, 0.15);
+/* Header image */
+.cargo11 {
+  width: 100%;
 }
 
-.cargo11 {
-  margin: -110px 0;
-  width: 100%;
+@media (min-width: 950px) {
+  .cargo11 {
+    margin: -136px auto;
+  }
 }
 
 .fa-search {
@@ -223,13 +226,19 @@ DESKTOP NAV */
 /* main content CSS Grid */
 .mycontainer {
   display: grid;
-  grid-template-columns: auto;
-  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  padding: 25px;
+  grid-gap: 10px;
+  column-gap: 10px;
   grid-template-areas:
-    'textBlock'
-    'blockSection1'
-    'blockSection2'
-    'blockSection3';
+    'textBlock .'
+    'blockSection1 blockSection1'
+    'blockSection2 blockSection2'
+    'blockSection3 blockSection3'
+    'button1 button1';
+}
+.mycontainer p {
+  font-size: 16px;
 }
 
 @media (min-width: 500px) {
@@ -238,37 +247,56 @@ DESKTOP NAV */
     grid-gap: 5px;
     grid-template-areas:
       ' . textBlock .  '
-      ' blockSection1 blockSection2 blockSection3 ';
+      ' blockSection1 blockSection2 blockSection3 '
+      '. button1 .';
   }
 }
 
 @media (min-width: 700px) {
   .mycontainer {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     column-gap: 20px;
     grid-template-areas:
-      '. textBlock . . .'
-      ' . blockSection1 blockSection2 blockSection3 . ';
+      '. . textBlock . . . . . '
+      ' . blockSection1 blockSection1 blockSection2 blockSection2 blockSection3 blockSection3 . '
+      '. . . button1 button1. . . ';
   }
 }
 
-.imgBlock13 {
-  height: 240px;
+/* block of 3 images dimension */
+.imgBlock1-3 {
+  background-color: #fff;
+  width: 100%;
+  transition: all 2s ease-in-out 0s;
 }
-
+.imgBlock1-3:hover {
+  transform: scale(1.3);
+}
 .textBlock {
   grid-area: textBlock;
-  position: relative;
-  bottom: 520px;
-  font-size: 2vw;
+}
+.textBlock h2 {
+  font-size: 4vw;
   color: white;
   text-align: center;
-  background: rgba(3, 3, 3, 0.281);
+  background: rgba(3, 3, 3, 0.44);
+  margin-top: -120px;
+  padding: 10px;
+}
+@media (min-width: 950px) {
+  .textBlock h2 {
+    position: absolute;
+    top: 500px;
+    width: 25%;
+  }
 }
 
 .blockSection1 {
   grid-area: blockSection1;
+}
+
+.box {
+  background-color: #fff;
 }
 
 .blockSection2 {
@@ -277,4 +305,90 @@ DESKTOP NAV */
 
 .blockSection3 {
   grid-area: blockSection3;
+}
+
+.button1 {
+  grid-area: button1;
+  padding: 30px;
+}
+
+.blockSection1,
+.blockSection2,
+.blockSection3 {
+  padding: 20px;
+  box-shadow: 1px 0px 3px 0 #ddd;
+  border: 1px solid #eee;
+  color: #333;
+}
+
+.read-more1 {
+  float: right;
+  position: relative;
+  margin-top: -39px;
+}
+
+/* read more buttons 1 of 3 */
+.read-more1 span {
+  display: block;
+  background-color: #1b2936;
+  color: #fff;
+  text-transform: uppercase;
+  padding-left: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease 0s;
+}
+
+.read-more1:hover span {
+  transform: translate(-15px, 0);
+}
+
+span i {
+  background-color: #2f3840;
+  padding: 12px 12px;
+  font-size: 10px;
+  margin-left: 15px;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  padding: 12px 60px;
+  background-color: #fac312;
+  margin: 0 auto;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s;
+  justify-self: center;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 16px;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
