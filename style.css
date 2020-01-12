@@ -142,7 +142,7 @@ a:hover {
 #menuToggle {
   position: fixed;
   left: calc(100vw - 70px);
-  top: calc(90vh - 50px);
+  top: calc(100vh - 80px);
 }
 
 #menu {
