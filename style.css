@@ -247,7 +247,6 @@ Navigation menu */
 @media screen and (min-width: 500px) {
   .mycontainer {
     grid-template-columns: repeat(3, 1fr);
-
     column-gap: 10px;
     grid-template-areas:
       ' textBlock . .  '
@@ -276,18 +275,19 @@ Navigation menu */
   grid-template-rows: auto;
   background: url(img/road.jpg) no-repeat fixed #ccc;
   grid-template-areas:
-    'aboutus skills'
-    'forklift forklift'
-    'contactf contactf';
+    'aboutus aboutus'
+    'skills skills'
+    'contactf contactf'
+    'footer pageUp';
 }
 
 @media screen and (min-width: 500px) {
   .mycontainer2 {
     grid-template-columns: repeat(3, 1fr);
-
     grid-template-areas:
-      ' aboutus aboutus skills  '
-      ' forklift contactf contactf  ';
+      ' aboutus aboutus skills '
+      ' forklift contactf contactf '
+      ' . footer pageUp';
   }
 }
 
@@ -577,6 +577,6 @@ fieldset {
   padding: 70px;
 }
 
-/* #top {
+#top {
   scroll-behavior: smooth;
-} */
+}
