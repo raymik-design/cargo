@@ -10,6 +10,7 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
+
     <title>Freight Company - Git Project</title>
   </head>
   <body>
@@ -72,8 +73,11 @@
         srcset="img/cargo1.jpg"
         alt="cargo"
       />
-
-      <!-- CSS GRID STARTS -->
+      <!-- CSS 
+    GRID 
+  STARTS
+  Here
+       -->
       <div class="mycontainer">
         <!-- text block at header image left -->
         <div class="box textBlock">
@@ -145,11 +149,103 @@
           </p>
         </div>
         <div class="button1">
-          <button type="button"><span>VIEW DETAILS</span></button>
+          <button type="button" class="buttons1">VIEW DETAILS</button>
+        </div>
+      </div>
+      <!-- section about us - nested grid-->
+      <div class="mycontainer2">
+        <div class="about-us">
+          <ul>
+            <li><h3>Global Logistics</h3></li>
+            <li><h2>Our Services</h2></li>
+            <li><p>As a market leader in global air freight forwarding.</p></li>
+            <li><h3>Logistics</h3></li>
+            <li><h3>Packaging</h3></li>
+            <li><h3>Materials</h3></li>
+          </ul>
+        </div>
+
+        <div class="skills">
+          <p>
+            Whether you require distribution or fulfillment, defined freight
+            forwarding, or a complete supply chain solution, GL can provide you
+            with a customized solution tailored to your needs.
+          </p>
+          <i class="fas fa-ship"></i>
+          <i class="fas fa-truck"></i>
+          <i class="fas fa-plane"></i>
+          <i class="fas fa-truck-moving"></i>
+          <i class="fas fa-truck-loading"></i>
+        </div>
+
+        <div class="forklift">
+          <img src="img/calculator.jpg" class="forkImg" alt="forklift" />
+        </div>
+
+        <!-- Contact us -->
+        <div class="calc">
+          <h3>Contact us</h3>
+          <form id="contact" action="get" method="post">
+            <h4>Contact us for custom quote</h4>
+            <fieldset>
+              <input
+                placeholder="Your name"
+                type="text"
+                tabindex="1"
+                required
+                autofocus
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                placeholder="Your Email Address"
+                type="email"
+                tabindex="2"
+                required
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                placeholder="Your Phone Number (optional)"
+                type="tel"
+                tabindex="3"
+                required
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                placeholder="Your Web Site (optional)"
+                type="url"
+                tabindex="4"
+                required
+              />
+            </fieldset>
+            <fieldset>
+              <textarea
+                placeholder="Type your message here...."
+                tabindex="5"
+                required
+              ></textarea>
+            </fieldset>
+            <fieldset>
+              <button
+                name="submit"
+                type="submit"
+                id="contact-submit"
+                data-submit="...Sending"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </form>
         </div>
       </div>
     </main>
 
     <footer></footer>
+    <script
+      src="https://kit.fontawesome.com/34a51bdefe.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

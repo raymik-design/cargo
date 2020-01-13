@@ -10,7 +10,7 @@ body {
   /* make it look decent enough  */
   /* background: #232323; */
   color: #cdcdcd;
-  font-family: 'Avenir Next', 'Avenir', sans-serif;
+  font-family: "Avenir Next", "Avenir", sans-serif;
   width: 100%;
 }
 
@@ -176,7 +176,7 @@ html {
 }
 
 .imglogo {
-  padding: 5px;
+  padding: 15px;
 }
 
 @media (min-width: 950px) {
@@ -190,8 +190,8 @@ DESKTOP
 Navigation menu */
 .menuDesk {
   display: flex;
-  line-height: 2vw;
-  font-size: 1.4vw;
+  line-height: 3vw;
+  font-size: 1.2vw;
   flex-wrap: wrap;
 }
 
@@ -231,12 +231,13 @@ Navigation menu */
   padding: 25px;
   grid-gap: 10px;
   column-gap: 10px;
+  justify-items: center;
   grid-template-areas:
-    'textBlock .'
-    'blockSection1 blockSection1'
-    'blockSection2 blockSection2'
-    'blockSection3 blockSection3'
-    'button1 button1';
+    "textBlock ."
+    "blockSection1 blockSection1"
+    "blockSection2 blockSection2"
+    "blockSection3 blockSection3"
+    "button1 button1";
 }
 .mycontainer p {
   font-size: 16px;
@@ -244,23 +245,41 @@ Navigation menu */
 
 @media (min-width: 500px) {
   .mycontainer {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     grid-template-areas:
-      ' . textBlock .  '
-      ' blockSection1 blockSection2 blockSection3 '
-      '. button1 .';
+      " . textBlock .  "
+      " blockSection1 blockSection2 blockSection3 "
+      ". button1 .";
   }
 }
 
 @media (min-width: 700px) {
   .mycontainer {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(10, 1fr);
     column-gap: 20px;
     grid-template-areas:
-      '. . textBlock . . . . . '
-      ' . blockSection1 blockSection1 blockSection2 blockSection2 blockSection3 blockSection3 . '
-      '. . . button1 button1. . . ';
+      " textBlock . . . . . . . . .   "
+      " . .  blockSection1 blockSection1 blockSection2  blockSection2  blockSection3 blockSection3 . . "
+      ". . . . button1 button1 . . . .  ";
+  }
+}
+
+.mycontainer2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "aboutus skills"
+    "calc calc"
+    "forklift forklift";
+}
+
+@media (min-width: 950px) {
+  .mycontainer2 {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "aboutus aboutus aboutus aboutus aboutus aboutus skills skills skills skills skills skills"
+      "forklift forklift forklift forklift forklift forklift calc calc calc cal calc calc";
   }
 }
 
@@ -268,16 +287,19 @@ Navigation menu */
 .imgBlock1-3 {
   background-color: #fff;
   width: 100%;
-  transition: all 2s ease-in-out 0s;
 }
-.imgBlock1-3:hover {
-  transform: scale(1.3);
+.blockSection1:hover,
+.blockSection2:hover,
+.blockSection3:hover {
+  transition: all 1s ease-in-out 0s;
+  transform: scale(1.1);
 }
 
 /* text block at header image left */
 .textBlock {
   grid-area: textBlock;
 }
+
 .textBlock h2 {
   font-size: 4vw;
   color: white;
@@ -294,6 +316,8 @@ Navigation menu */
   }
 }
 
+/* GRID 
+AREA */
 .blockSection1 {
   grid-area: blockSection1;
 }
@@ -312,7 +336,55 @@ Navigation menu */
 
 .button1 {
   grid-area: button1;
-  padding: 30px;
+}
+
+.about-us {
+  grid-area: aboutus;
+  background-color: #232323;
+  color: #fff;
+  padding: 5px;
+}
+.about-us ul {
+  list-style-type: none;
+}
+
+.skills {
+  grid-area: skills;
+  padding: 25px;
+  background-color: #2f3840;
+}
+
+.forklift {
+  grid-area: forklift;
+}
+
+.calc {
+  grid-area: calc;
+  padding: 15px;
+}
+
+.skills p {
+  font-size: 4vw;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .skills p {
+    font-size: 1vw;
+  }
+}
+
+.skills i {
+  color: #fff;
+  padding: 10px;
+  font-size: 6vw;
+}
+
+@media (min-width: 700px) {
+  .skills i {
+    padding: 40px;
+    font-size: 4vw;
+  }
 }
 
 .blockSection1,
@@ -353,45 +425,118 @@ span i {
   margin-left: 15px;
 }
 
-button {
+.buttons1 {
+  margin-top: 20px;
   text-transform: uppercase;
   font-weight: 700;
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  backface-visibility: hidden;
+  padding: 10px 70px;
   border-radius: 25px;
-  padding: 12px 60px;
   background-color: #fac312;
-  margin: 0 auto;
   color: #fff;
   cursor: pointer;
-  transition: all 0.5s;
-  justify-self: center;
 }
 
-button span {
+.forkImg {
+  width: 100%;
+}
+
+/* Contact 
+form 
+code */
+
+.calc h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #404856;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+}
+
+#contact {
+  background: #f9f9f9;
+  padding: 25px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
   cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-  font-size: 16px;
+  width: 100%;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
 }
 
-button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+#contact button[type="submit"]:hover {
+  background: #43a047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
-button:hover span {
-  padding-right: 25px;
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-button:hover span:after {
-  opacity: 1;
-  right: 0;
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
 }
