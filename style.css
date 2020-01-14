@@ -7,8 +7,8 @@
 body {
   margin: 0;
   padding: 0;
-  color: #cdcdcd;
-  font-family: "Roboto", sans-serif;
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
   width: 100%;
 }
 
@@ -27,7 +27,6 @@ a:hover {
   font-size: 6vw;
   font-weight: 900;
   letter-spacing: 2px;
-  padding: 10px;
 }
 
 @media (min-width: 950px) {
@@ -221,6 +220,7 @@ Navigation menu */
   line-height: 3vw;
   font-size: 1.2vw;
   flex-wrap: wrap;
+  padding: 12px;
 }
 
 @media (max-width: 950px) {
@@ -262,11 +262,11 @@ Navigation menu */
   column-gap: 10px;
   justify-items: center;
   grid-template-areas:
-    "textBlock ."
-    "blockSection1 blockSection1"
-    "blockSection2 blockSection2"
-    "blockSection3 blockSection3"
-    "button1 button1";
+    'textBlock .'
+    'blockSection1 blockSection1'
+    'blockSection2 blockSection2'
+    'blockSection3 blockSection3'
+    'button1 button1';
 }
 .mycontainer p {
   font-size: 16px;
@@ -277,9 +277,9 @@ Navigation menu */
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
     grid-template-areas:
-      " textBlock . .  "
-      " blockSection1 blockSection2 blockSection3 "
-      ". button1 .";
+      ' textBlock . .  '
+      ' blockSection1 blockSection2 blockSection3 '
+      '. button1 .';
   }
 }
 
@@ -290,9 +290,9 @@ Navigation menu */
     column-gap: 20px;
     grid-gap: 20px;
     grid-template-areas:
-      " textBlock . . . . . . . . . . "
-      ". blockSection1 blockSection1 blockSection1 blockSection2 blockSection2  blockSection2 blockSection3 blockSection3 blockSection3 .  "
-      ". . . . button1 button1 button1 . . . .  ";
+      ' textBlock . . . . . . . . . . '
+      '. blockSection1 blockSection1 blockSection1 blockSection2 blockSection2  blockSection2 blockSection3 blockSection3 blockSection3 .  '
+      '. . . . button1 button1 button1 . . . .  ';
   }
 }
 
@@ -300,32 +300,32 @@ Navigation menu */
 .mycontainer2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #ccc;
+  background-color: #fff;
   grid-template-areas:
-    "aboutus aboutus"
-    "skills skills"
-    "contactf contactf"
-    "footer footer ";
+    'aboutus aboutus'
+    'skills skills'
+    'contactf contactf'
+    'footer footer ';
 }
 
 @media screen and (min-width: 700px) {
   .mycontainer2 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-      " aboutus aboutus skills skills "
-      " . contactf  contactf . "
-      "footer footer footer footer ";
+      ' aboutus aboutus skills skills '
+      ' . contactf  contactf . '
+      'footer footer footer footer ';
   }
 }
 
 @media screen and (min-width: 950px) {
   .mycontainer2 {
     grid-template-columns: repeat(8, 1fr);
-    background: url(img/road.jpg) no-repeat fixed #ccc;
+    background: url(img/road.jpg) no-repeat fixed #fff;
     grid-template-areas:
-      "aboutus aboutus aboutus aboutus skills skills skills skills"
-      " forklift forklift forklift forklift . contactf contactf .  "
-      ". . . footer footer . . pageUp";
+      'aboutus aboutus aboutus aboutus skills skills skills skills'
+      ' forklift forklift forklift forklift . contactf contactf .  '
+      '. . . footer footer . . pageUp';
   }
 }
 
@@ -398,7 +398,6 @@ AREA */
 
 .about-us {
   grid-area: aboutus;
-
   background-color: rgba(0, 0, 0, 0.376);
   color: #fff;
 }
@@ -431,6 +430,7 @@ AREA */
 
 .forklift {
   grid-area: forklift;
+  background-color: #fff;
 }
 @media (max-width: 950px) {
   .forklift {
@@ -441,6 +441,7 @@ AREA */
 .contactf {
   grid-area: contactf;
   padding: 15px;
+  background-color: #fff;
 }
 
 .footer {
@@ -558,12 +559,12 @@ code */
   }
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
+#contact input[type='text'],
+#contact input[type='email'],
+#contact input[type='tel'],
+#contact input[type='url'],
 #contact textarea,
-#contact button[type="submit"] {
+#contact button[type='submit'] {
 }
 
 #contact {
@@ -592,10 +593,10 @@ fieldset {
   width: 100%;
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
+#contact input[type='text'],
+#contact input[type='email'],
+#contact input[type='tel'],
+#contact input[type='url'],
 #contact textarea {
   width: 100%;
   border: 1px solid #ccc;
@@ -604,10 +605,10 @@ fieldset {
   padding: 10px;
 }
 
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact input[type="url"]:hover,
+#contact input[type='text']:hover,
+#contact input[type='email']:hover,
+#contact input[type='tel']:hover,
+#contact input[type='url']:hover,
 #contact textarea:hover {
   transition: border-color 0.3s ease-in-out;
   border: 1px solid #aaa;
@@ -619,7 +620,7 @@ fieldset {
   resize: none;
 }
 
-#contact button[type="submit"] {
+#contact button[type='submit'] {
   cursor: pointer;
   width: 100%;
   border: none;
@@ -630,14 +631,14 @@ fieldset {
   font-size: 15px;
 }
 
-#contact button[type="submit"]:hover {
+#contact button[type='submit']:hover {
   background: #43a047;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-#contact button[type="submit"]:active {
+#contact button[type='submit']:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
