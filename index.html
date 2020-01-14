@@ -10,6 +10,7 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
+ 
 
     <title>Freight Company - Git Project</title>
   </head>
@@ -18,7 +19,11 @@
     <a id="top"></a>
     <div class="topheader">
       <header>
-        <img src="img/logo.png" alt="logo" class="imglogo" title="Cargo" />
+        <h1 class="logo">
+        <a href="index.html">
+          <i class="fas fa-truck-loading"></i> Trans Cargo
+        </a>
+      </h1>
       </header>
       <!-- Mobile nav Menu -->
       <nav class="mobNav">
@@ -43,13 +48,13 @@
           <!--
       Too bad the menu has to be inside of the button
       but hey, it's pure CSS magic.
-      -->
+      --> 
           <ul id="menu">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">INFO</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#top">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#info">INFO</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
             <li><i class="fas fa-search"></i></li>
           </ul>
         </div>
@@ -57,11 +62,11 @@
 
       <!-- Desktop nav Menu  menudesk-->
       <nav class="menuDesk">
-        <a class="aaa active" href="#">HOME</a>
-        <a class="aaa" href="#">ABOUT</a>
-        <a class="aaa" href="#">INFO</a>
-        <a class="aaa" href="#">SERVICES</a>
-        <a class="aaa" href="#">CONTACT</a>
+        <a class="aaa active" href="#top">HOME</a>
+        <a class="aaa" href="#about">ABOUT</a>
+        <a class="aaa" href="#info">INFO</a>
+        <a class="aaa" href="#services">SERVICES</a>
+        <a class="aaa" href="#contact">CONTACT</a>
         <a><i class="fas fa-search"></i></a>
       </nav>
     </div>
@@ -133,6 +138,7 @@
         </div>
 
         <!-- image block just after header image 3 of 3 -->
+        <a id="info"></a>
         <div class="box blockSection3">
           <img src="img/larges.jpg" class="imgBlock1-3" alt="GROUNDSHIPPING" />
           <a href="#" class="read-more1">
@@ -155,6 +161,7 @@
         </div>
       </div>
       <!-- section about us - nested grid-->
+      <a id="services"></a>
       <div class="mycontainer2">
         <div class="about-us">
           <ul>
@@ -166,7 +173,7 @@
             <li><h3>Materials</h3></li>
           </ul>
         </div>
-
+        <a id="about"></a>
         <div class="skills">
           <p>
             Whether you require distribution or fulfillment, defined freight
@@ -185,6 +192,7 @@
         </div>
 
         <!-- Contact us -->
+        <a id="contact"></a>
         <div class="contactf">
           <h3>Contact us</h3>
           <form id="contact" action="#" method="post">
@@ -241,13 +249,14 @@
             </fieldset>
           </form>
         </div>
-
-        <footer class="footer">
-          <p>Crafted by RayMik at Copyright at 2020</p>
-        </footer>
+<div class="footer">
+        <footer>
+          <p>Crafted by RayMik &copy; All rights reserved 2020</p>
+        </div>
         <div class="pageUp">
           <a href="#top"><i class="fas fa-arrow-up"></i></a>
         </div>
+      </footer>
       </div>
     </main>
     <script
