@@ -7,8 +7,6 @@
 body {
   margin: 0;
   padding: 0;
-  /* make it look decent enough  */
-  /* background: #232323; */
   color: #cdcdcd;
   font-family: "Mercury SSm A", "Mercury SSm B", georgia, serif;
   width: 100%;
@@ -78,8 +76,6 @@ a:hover {
 
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
 }
 
 /*
@@ -406,7 +402,7 @@ AREA */
   color: #fff;
 }
 @media (min-width: 950px) {
-  about-us {
+  .about-us {
     background-color: rgba(54, 130, 182, 0.4);
     padding: 50px;
   }
