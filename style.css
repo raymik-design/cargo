@@ -302,7 +302,7 @@ Navigation menu */
     "aboutus aboutus"
     "skills skills"
     "contactf contactf"
-    "footer pageUp";
+    "footer footer";
 }
 
 @media screen and (min-width: 500px) {
@@ -311,7 +311,7 @@ Navigation menu */
     grid-template-areas:
       " aboutus aboutus skills skills "
       " . contactf  contactf . "
-      " footer footer . pageUp";
+      ". footer footer . ";
   }
 }
 
@@ -441,15 +441,15 @@ AREA */
 
 .pageUp {
   grid-area: pageUp;
-  font-size: 5vw;
+  font-size: 2vw;
   position: fixed;
   bottom: 0;
   right: 20px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 500px) {
   .pageUp {
-    font-size: 2vw;
+    display: none;
   }
 }
 
