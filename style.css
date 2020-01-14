@@ -26,9 +26,15 @@ a:hover {
 }
 
 .logo {
-  font-size: 2vw;
+  font-size: 5vw;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+@media (min-width: 950px) {
+  .logo {
+    font-size: 2vw;
+  }
 }
 
 .fa-truck-loading {
@@ -269,7 +275,7 @@ Navigation menu */
   font-size: 16px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .mycontainer {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
@@ -280,7 +286,7 @@ Navigation menu */
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 950px) {
   .mycontainer {
     grid-template-columns: repeat(11, 1fr);
 
@@ -305,13 +311,13 @@ Navigation menu */
     "footer footer";
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .mycontainer2 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       " aboutus aboutus skills skills "
       " . contactf  contactf . "
-      ". footer footer . ";
+      "footer footer footer footer ";
   }
 }
 
@@ -399,7 +405,7 @@ AREA */
   background-color: rgba(0, 0, 0, 0.376);
   color: #fff;
 }
-@media (min-width: 768px) {
+@media (min-width: 950px) {
   about-us {
     background-color: rgba(54, 130, 182, 0.4);
     padding: 50px;
@@ -419,7 +425,7 @@ AREA */
   background-color: rgba(0, 0, 0, 0.376);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 950px) {
   .skills {
     background-color: rgba(54, 130, 182, 0.4);
     padding: 50px;
@@ -428,6 +434,11 @@ AREA */
 
 .forklift {
   grid-area: forklift;
+}
+@media (max-width: 950px) {
+  .forklift {
+    display: none;
+  }
 }
 
 .contactf {
@@ -447,7 +458,7 @@ AREA */
   right: 20px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 950px) {
   .pageUp {
     display: none;
   }
@@ -455,11 +466,17 @@ AREA */
 
 .skills p {
   color: #fff;
-  font-size: 4vw;
+  font-size: 5vw;
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
+  .skills p {
+    font-size: 2vw;
+    line-height: 4vw;
+  }
+}
+@media (min-width: 950px) {
   .skills p {
     font-size: 1.7vw;
     line-height: 2.8vw;
@@ -472,7 +489,7 @@ AREA */
   padding: 6px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 950px) {
   .skills i {
     padding: 40px;
     font-size: 4vw;
@@ -526,16 +543,6 @@ span i {
   background-color: #fac312;
   color: #fff;
   cursor: pointer;
-}
-
-.forkImg {
-  height: 100%;
-}
-
-@media (max-width: 950px) {
-  .forkImg {
-    display: none;
-  }
 }
 
 /* Contact 
