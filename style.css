@@ -1,7 +1,7 @@
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -40,6 +40,12 @@ a:hover {
   color: #444444;
 }
 
+.fa-truck-loading:hover {
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
 @keyframes example {
   from {
     transform: rotate(0deg);
@@ -47,12 +53,6 @@ a:hover {
   to {
     transform: rotate(360deg);
   }
-}
-
-.fa-truck-loading:hover {
-  position: relative;
-  animation-name: example;
-  animation-duration: 2s;
 }
 
 #menuToggle {
@@ -455,6 +455,9 @@ AREA */
   right: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 @media (max-width: 950px) {
   .pageUp {
     display: none;
